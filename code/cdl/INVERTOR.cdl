@@ -1,0 +1,14 @@
+********************************************************************************
+* Library Name: Pipeline_ADC
+* Cell Name: invertor
+* View Name: schematic
+********************************************************************************
+
+.SUBCKT invertor vdd vss vin out
+
+XI0 gnd in out vdd vss  / OPAMP
+
+Rf in out 100k
+R1 vin in 100k
+
+.ENDS

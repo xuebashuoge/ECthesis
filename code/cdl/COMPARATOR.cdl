@@ -1,0 +1,25 @@
+********************************************************************************
+* Library Name: Pipeline_ADC
+* Cell Name: comparator
+* View Name: schematic
+********************************************************************************
+
+.SUBCKT comparator vdd gnd vip vin outp clk
+
+XI0 n3 outp gnd vdd / inv_dac
+XI1 n4 outn gnd vdd / inv_dac
+MN1 n1 vip n5 gnd n18 W=20u L=0.2u m=1
+MN2 n2 vin n5 gnd n18 W=20u L=0.2u m=1
+MN3 n3 n4 n1 gnd n18 W=20u L=0.2u m=1
+MN4 n4 n3 n2 gnd n18 W=20u L=0.2u m=1
+MP1 n1 clk vdd vdd p18 W=20u L=0.2u m=1
+MP2 n3 clk vdd vdd p18 W=20u L=0.2u m=1
+MP3 n3 n4 vdd vdd p18 W=20u L=0.2u m=1
+MP4 n4 n3 vdd vdd p18 W=20u L=0.2u m=1
+MP5 n4 clk vdd vdd p18 W=20u L=0.2u m=1
+MP6 n2 clk vdd vdd p18 W=20u L=0.2u m=1
+MNX1 n2 vip n2 gnd n18 W=20u L=0.2u m=1
+MNX2 n1 vin n1 gnd n18 W=20u L=0.2u m=1
+MN7 n5 clk gnd gnd n18 W=20u L=0.2u m=1
+
+.ENDS

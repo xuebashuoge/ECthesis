@@ -1,0 +1,10 @@
+********************************************************************************
+* Library Name: Pipeline_ADC
+* Cell Name: inv_dac
+* View Name: schematic
+********************************************************************************
+
+.SUBCKT inv_dac A Z gnda vdda 	
+MNM1 Z A gnda gnda n18 W=2.5u L=180n m=1
+MPMl Z A vdda vdda p18 W=5u L=180n m=1 
+.ENDS

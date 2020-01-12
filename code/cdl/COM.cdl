@@ -1,0 +1,11 @@
+********************************************************************************
+* Library Name: Pipeline_ADC
+* Cell Name: compare
+* View Name: schematic
+********************************************************************************
+
+.SUBCKT compare vdd vss vip vin out
+
+XI0 vip vin out vdd vss / OPAMP
+
+.ENDS

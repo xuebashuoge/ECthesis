@@ -1,0 +1,12 @@
+********************************************************************************
+* Library Name: Pipeline_ADC
+* Cell Name: transgate
+* View Name: schematic
+********************************************************************************
+
+.SUBCKT transgate vdd gnd vin out clk
+XI0 clk clkb gnd vdd / inv_dac
+M1 vin clk out gnd n18 W=20u L=200n m=1
+M2 vin clkb out vdd p18 W=40u L=200n m=1
+
+.ENDS

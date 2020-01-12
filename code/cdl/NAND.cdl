@@ -1,0 +1,12 @@
+********************************************************************************
+* Library Name: Pipeline_ADC
+* Cell Name: nand
+* View Name: schematic
+********************************************************************************
+
+.SUBCKT nand A B out gnda vdda 	
+MNM1 n1 B gnda gnda n18 W=2u L=180n m=1
+MNM2 out A n1 gnda n18 W=2u L=180n m=1
+MPM1 out B vdda vdda p18 W=4u L=180n m=1 
+MPM2 out A vdda vdda p18 W=4u L=180n m=1 
+.ENDS

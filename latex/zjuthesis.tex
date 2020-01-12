@@ -1,0 +1,56 @@
+% Zhejiang University Undergraduate Graduation Thesis/Design Template
+% Author: Zixuan Wang
+% Email : zxwang42 [at] gmail.com
+% Update: https://github.com/TheNetAdmin/zjuthesis/releases
+
+\documentclass[
+    StudentName = 何扬槊,
+    StudentID   = 3180102687,
+    AdvisorName = 周金芳,
+    Grade       = 2018,            % only the year, no '级'
+    Major       = 信息工程,
+    Department  = 信息与电子工程学院,
+    Title       = 高速低功耗流水线ADC子电路设计,
+    SubmitDate  = 2020年1月12日,
+    MajorFormat = isee,
+    Degree      = undergraduate,   % 'undergraduate' or 'graduate'
+    Type        = thesis,          % 'thesis'   or 'design' or 'equal'(only for graduate)
+    Period      = final,           % 'proposal' or 'final'
+    BlindReview = false,           % 'false'    or 'true'
+    Language    = chinese,         % 'chinese'  or 'english'
+    % Below only for 'graduate'
+    GradLevel       = master,      % 'master' or 'doctor'
+    Topic           = 研究方向,
+    ColaboratorName = 合作导师
+]{./config/zjuthesis}
+
+\newcommand{\inputfinal}
+{
+    % Final part
+    \newrefsection
+    \inputpage{final/cover}
+    \inputpage{final/toc}
+    \cleardoublestylepage{previous}
+    \inputbody{final/content}
+
+
+
+}
+
+
+\begin{document}
+
+\ifthenelse{\equal{\Degree}{undergraduate}}
+{
+    \ifthenelse{\equal{\Period}{final}}
+    {
+        \inputfinal{}
+    }
+    {
+        \inputproposal{}
+    }
+}
+{
+    \inputgraduate{}
+}
+\end{document}
